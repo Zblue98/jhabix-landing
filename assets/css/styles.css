@@ -12,7 +12,8 @@
 /* 🌿 Fondo con degradado suave */
 body {
     background: linear-gradient(to bottom, var(--verde-principal), var(--blanco));
-    font-family: Open;
+    font-family: "Open Sans";
+    
 }
 
 /* 🏆 Animación en los botones */
