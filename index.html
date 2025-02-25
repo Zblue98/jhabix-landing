@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHABIX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="assets/img/logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/countdown.js"></script> <!-- ✅ Archivo JS externo -->
+</head>
+
+<body class="bg-verde-fondo Open-sans animate-fadeIn">
+    <!-- 🔰 Encabezado -->
+    <header class="text-center md:text-left py-10 md:py-20 bg-verde-principal text-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <!-- Texto principal -->
+            <div class="md:w-1/2 md:pr-12 lg:pr-20 transition-all duration-300 transform ">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide leading-tight">
+                    JHABIX
+                </h1>
+                <p class="mt-4 md:mt-6 text-xl md:text-2xl lg:text-3xl font-semibold opacity-90 hover:opacity-100 transition-opacity">
+                    La maceta inteligente que capta agua del aire<br class="hidden md:block"> y mejora el ambiente
+                </p>
+            </div>
+    
+            <!-- Contenedor de la imagen -->
+            <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+                <img src="assets/img/hero-jhabix.png" 
+                     alt="JHABIX Maceta Inteligente" 
+                     class="w-2/3 md:w-full max-w-2xl lg:max-w-3xl xl:max-w-4xl transform hover:scale-105 transition-transform duration-300"
+                     data-aos="zoom-in">
+            </div>
+        </div>
+    </header>
+
+    <!-- 🔥 Sección de Cuenta Regresiva -->
+    <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center">
+        <h2 class="text-2xl font-bold mb-4">¡Falta poco para el lanzamiento!</h2>
+        <p class="text-lg text-gray-700">Regístrate para ser de los primeros en conocer JHABIX</p>
+        <div id="cuentaRegresiva" class="text-3xl font-bold text-morado-principal mt-4"></div>
+    </section>
+
+    <!-- 📢 Beneficios -->
+    <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center">
+        <h2 class="text-2xl font-bold mb-4">¿Por qué JHABIX?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <img src="assets/img/beneficio-riego.png" alt="Riego automático" class="mx-auto w-24">
+                <p class="mt-2">Riega automáticamente sin usar agua externa</p>
+            </div>
+            <div>
+                <img src="assets/img/beneficio-filtrado.png" alt="Filtración HEPA" class="mx-auto w-24">
+                <p class="mt-2">Purifica el aire con un filtro HEPA</p>
+            </div>
+            <div>
+                <img src="assets/img/beneficio-app.png" alt="Control por app" class="mx-auto w-24">
+                <p class="mt-2">Controla la humedad y temperatura con una app</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔧 Cómo Funciona -->
+        <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center">
+            <h2 class="text-2xl font-bold mb-4">¿Cómo funciona JHABIX?</h2>
+            <p class="text-lg text-gray-700">Captura agua del aire y ajusta el riego de forma automática.</p>
+            <img src="assets/img/V2-concept-art.png" alt="Diagrama del sistema de JHABIX" class="mx-auto mt-4 w-3/4 md:w-1/2">
+        </section>
+
+    <!-- 📩 Formulario de suscripción -->
+    <section class="max-w-lg mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center">
+        <h2 class="text-2xl font-bold">Sé el primero en enterarte</h2>
+        <p class="mt-2">Regístrate y recibe noticias exclusivas sobre JHABIX</p>
+        <form id="formulario" action="https://formspree.io/f/tu-endpoint" method="POST" class="mt-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico:</label>
+            <input type="email" name="email" id="email" placeholder="Tu correo electrónico"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-verde-principal"
+                required>
+            <span id="email-error" class="text-red-600 text-xs mt-1 hidden">❌ Ingresa un correo válido.</span>
+
+            <label class="block mt-4 text-gray-700 text-sm font-bold mb-2">¿Cómo te gustaría participar?</label>
+            <select name="participacion" id="participacion" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-verde-principal">
+                <option value="comprar">Quiero comprar JHABIX</option>
+                <option value="invertir">Quiero invertir en JHABIX</option>
+                <option value="informacion">Solo quiero información</option>
+            </select>
+
+            <button type="submit" class="mt-4 w-full bg-morado-principal text-white font-bold py-3 rounded-lg hover:bg-verde-secundario">
+                Notificarme 🔔
+            </button>
+        </form>
+    </section>
+
+    <!-- 🔗 Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            <!-- Logo de JHABIX -->
+            <img src="assets/img/logo-jhabix.png" alt="Logo JHABIX" class="w-20">
+            
+            <!-- Redes Sociales -->
+            <div class="text-lg">
+                <p>Síguenos en nuestras redes sociales:</p>
+                <div class="mt-2 flex justify-center space-x-4">
+                    <a href="#" class="hover:text-yellow-300">Facebook</a>
+                    <a href="#" class="hover:text-yellow-300">Instagram</a>
+                    <a href="#" class="hover:text-yellow-300">Twitter</a>
+                </div>
+            </div>
+
+            <!-- Mascota de JHABIX -->
+            <img src="assets/img/mascota-jhabix.png" alt="Mascota JHABIX" class="w-24">
+        </div>
+
+        <p class="mt-4 text-sm">&copy; 2024 JHABIX. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

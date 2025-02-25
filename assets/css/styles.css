@@ -1,0 +1,60 @@
+/* 🎨 Paleta de colores */
+:root {
+    --verde-principal: #A8D5BA;
+    --morado-principal: #B19CD9;
+    --verde-secundario: #C1FF72;
+    --naranja-secundario: #FC937D;
+    --amarillo-secundario: #FFDE59;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+}
+
+/* 🌿 Fondo con degradado suave */
+body {
+    background: linear-gradient(to bottom, var(--verde-principal), var(--blanco));
+    font-family: Open;
+}
+
+/* 🏆 Animación en los botones */
+button {
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* 🛑 Mensajes de error */
+.text-red-600 {
+    font-weight: bold;
+}
+
+/* ✨ Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* 🏠 Estilos generales */
+.bg-verde-principal {
+    background-color: var(--verde-principal);
+}
+.bg-morado-principal {
+    background-color: var(--morado-principal);
+}
+.bg-verde-secundario {
+    background-color: var(--verde-secundario);
+}
+.text-morado-principal {
+    color: var(--morado-principal);
+}
