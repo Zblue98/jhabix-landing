@@ -30,6 +30,13 @@ button:hover {
     font-weight: bold;
 }
 
+model-viewer {
+    max-width: 600px;
+    height: 400px;
+    margin: auto;
+    display: block;
+}
+
 /* ✨ Animación de entrada */
 @keyframes fadeIn {
     from {
