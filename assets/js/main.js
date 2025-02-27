@@ -45,3 +45,4 @@ document.getElementById("formulario").addEventListener("submit", function(event)
         mensaje.innerText = "❌ Error de conexión, revisa tu internet.";
     });
 });
+

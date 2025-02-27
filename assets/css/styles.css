@@ -37,11 +37,58 @@ model-viewer {
     display: block;
 }
 
+.reloj-item {
+    text-align: center;
+    font-size: 2rem;
+    min-width: 80px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto de cambio de número */
+.reloj-item span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animación de parpadeo en los últimos 10 segundos */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.blink {
+    animation: blink 0.8s infinite;
+}
+
+
+/* Animación de Boton CTA */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes rgbGlow {
+    0% { box-shadow: 0 0 10px #800080; }  /* Púrpura */
+    25% { box-shadow: 0 0 15px #9932CC; } /* Orquídea oscura */
+    50% { box-shadow: 0 0 20px #9400D3; } /* Violeta oscuro */
+    75% { box-shadow: 0 0 15px #8A2BE2; } /* Azul violeta */
+    100% { box-shadow: 0 0 10px #800080; } /* Vuelve a Púrpura */
+}
+
+.boton-cta {
+    display: inline-block;
+    animation: bounce 1.5s infinite ease-in-out, rgbGlow 3s infinite linear !important;
+}
+
+
+
 /* ✨ Animación de entrada */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;

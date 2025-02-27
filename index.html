@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="JHABIX es la solución inteligente para hogares modernos. Descubre cómo la tecnología puede mejorar tu vida.">
+    <meta name="keywords"
+        content="JHABIX, smart home,smart pot, smart flower, flower pot, domótica, automatización, tecnología, innovación">
+    <meta name="author" content="JHABIX">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph para Facebook, LinkedIn -->
+    <meta property="og:title" content="JHABIX - Hogares Inteligentes">
+    <meta property="og:description"
+        content="Transforma tu hogar con JHABIX. Tecnología inteligente para mejorar tu calidad de vida.">
+    <meta property="og:image" content="https://jhabix.com/assets/img/social-preview.jpg">
+    <meta property="og:url" content="https://jhabix.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JHABIX - La Revolución en Hogares Inteligentes">
+    <meta name="twitter:description"
+        content="Descubre JHABIX, la tecnología que transforma tu hogar con automatización y eficiencia.">
+    <meta name="twitter:image" content="https://jhabix.com/assets/img/social-preview.jpg">
+
     <title>JHABIX</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="assets/img/logo.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script defer src="assets/js/countdown.js"></script> <!-- ✅ Archivo JS externo -->
+    <script defer src="assets/js/countdown.js"></script>
+    <script defer src="assets/js/faq.js"></script>
+    <script defer src="assets/js/modal.js"></script>
 </head>
 
 <body class="bg-verde-fondo Open-sans animate-fadeIn">
+
     <!-- 🔰 Encabezado -->
     <header class="text-center md:text-left py-10 md:py-20 bg-verde-principal text-white">
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
@@ -21,34 +47,53 @@
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide leading-tight">
                     JHABIX
                 </h1>
-                <p class="mt-4 md:mt-6 text-xl md:text-2xl lg:text-3xl font-semibold opacity-90 hover:opacity-100 transition-opacity">
+                <p
+                    class="mt-4 md:mt-6 text-xl md:text-2xl lg:text-3xl font-semibold opacity-90 hover:opacity-100 transition-opacity">
                     La maceta inteligente que capta agua del aire<br class="hidden md:block"> y mejora el ambiente
                 </p>
             </div>
-    
+
             <!-- Contenedor de la imagen -->
-            <model-viewer 
-            src="assets/3D/jhabix.glb" 
-            alt="JHABIX Maceta Inteligente"
-            ar 
-            auto-rotate 
-            camera-controls 
-            shadow-intensity="1"
-            exposure="1"
-            style="width: 100%; height: 400px; background-color: transparent;">
-        </model-viewer>
+            <model-viewer src="assets/3D/jhabix.glb" alt="JHABIX Maceta Inteligente" ar auto-rotate camera-controls
+                shadow-intensity="1" exposure="1" style="width: 100%; height: 400px; background-color: transparent;">
+            </model-viewer>
         </div>
     </header>
 
     <!-- 🔥 Sección de Cuenta Regresiva -->
-    <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center">
+    <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center animate-fadeIn">
         <h2 class="text-2xl font-bold mb-4">¡Falta poco para el lanzamiento!</h2>
-        <p class="text-lg text-gray-700">Regístrate para ser de los primeros en conocer JHABIX</p>
-        <div id="cuentaRegresiva" class="text-3xl font-bold text-morado-principal mt-4"></div>
+        <p class="text-lg text-gray-700">Regístrate ahora y sé de los primeros en conocer JHABIX y Obtén descuentos
+            exclusivos en su lanzamiento.🚀</p>
+
+        <div id="cuentaRegresiva" class="flex justify-center gap-4 mt-4 text-white text-3xl font-bold">
+            <div class="reloj-item bg-morado-principal rounded-lg px-4 py-2 shadow-lg">
+                <span id="dias">00</span><small class="block text-sm">Días</small>
+            </div>
+            <div class="reloj-item bg-morado-principal rounded-lg px-4 py-2 shadow-lg">
+                <span id="horas">00</span><small class="block text-sm">Horas</small>
+            </div>
+            <div class="reloj-item bg-morado-principal rounded-lg px-4 py-2 shadow-lg">
+                <span id="minutos">00</span><small class="block text-sm">Minutos</small>
+            </div>
+            <div class="reloj-item bg-morado-principal rounded-lg px-4 py-2 shadow-lg">
+                <span id="segundos">00</span><small class="block text-sm">Segundos</small>
+            </div>
+        </div>
+
+        <a href="#formulario" class="inline-block mt-6">
+
+            <button
+                class="boton-cta bg-morado-principal hover:bg-morado-hover text-white font-bold px-6 py-3 rounded-lg transition-colors duration-300">
+                ¡Obtener Descuento!
+            </button>
+        </a>
+
+
     </section>
 
     <!-- 📢 Beneficios -->
-    <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center">
+    <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center animate-fadeIn">
         <h2 class="text-2xl font-bold mb-4">¿Por qué JHABIX?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
@@ -67,14 +112,107 @@
     </section>
 
     <!-- 🔧 Cómo Funciona -->
-        <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center">
-            <h2 class="text-2xl font-bold mb-4">¿Cómo funciona JHABIX?</h2>
-            <p class="text-lg text-gray-700">Captura agua del aire y ajusta el riego de forma automática.</p>
-            <img src="assets/img/V2-concept-art.png" alt="Diagrama del sistema de JHABIX" class="mx-auto mt-4 w-3/4 md:w-1/2">
-        </section>
+    <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center animate-fadeIn">
+        <h2 class="text-2xl font-bold mb-4">¿Cómo funciona JHABIX?</h2>
+        <p class="text-lg text-gray-700">Captura agua del aire y ajusta el riego de forma automática.</p>
+        <img src="assets/img/V2-concept-art.png" alt="Diagrama del sistema de JHABIX"
+            class="mx-auto mt-4 w-3/4 md:w-1/2">
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section id="faq" class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-bold text-center mb-6">Preguntas Frecuentes</h2>
+    
+        <div class="space-y-4">
+            <!-- Pregunta 1 -->
+            <div class="border-b">
+                <button class="w-full text-left py-3 font-semibold flex justify-between items-center" onclick="toggleFAQ(1)">
+                    ¿Qué es JHABIX y cómo funciona?
+                    <span id="icon-1">+</span>
+                </button>
+                <p id="faq-1" class="hidden text-gray-700 pb-3">
+                    JHABIX es una maceta inteligente que capta agua del aire y mejora el ambiente de tu hogar. Su tecnología avanzada permite un riego automático sin necesidad de conexión a una toma de agua, optimizando el consumo de recursos y garantizando la salud de tus plantas.
+                </p>
+            </div>
+    
+            <!-- Pregunta 2 -->
+            <div class="border-b">
+                <button class="w-full text-left py-3 font-semibold flex justify-between items-center" onclick="toggleFAQ(2)">
+                    ¿Cuándo estará disponible JHABIX?
+                    <span id="icon-2">+</span>
+                </button>
+                <p id="faq-2" class="hidden text-gray-700 pb-3">
+                    Actualmente estamos en fase de desarrollo. Al registrarte, recibirás actualizaciones exclusivas sobre nuestro progreso y serás de los primeros en acceder al lanzamiento oficial.
+                </p>
+            </div>
+    
+            <!-- Pregunta 3 -->
+            <div class="border-b">
+                <button class="w-full text-left py-3 font-semibold flex justify-between items-center" onclick="toggleFAQ(3)">
+                    ¿Puedo invertir o ser parte del proyecto?
+                    <span id="icon-3">+</span>
+                </button>
+                <p id="faq-3" class="hidden text-gray-700 pb-3">
+                    ¡Sí! Estamos buscando inversionistas y colaboradores apasionados por la tecnología y la sostenibilidad. Si estás interesado en formar parte de JHABIX, contáctanos para explorar oportunidades.
+                </p>
+            </div>
+    
+            <!-- Pregunta 4 -->
+            <div class="border-b">
+                <button class="w-full text-left py-3 font-semibold flex justify-between items-center" onclick="toggleFAQ(4)">
+                    ¿Cómo puedo recibir más información?
+                    <span id="icon-4">+</span>
+                </button>
+                <p id="faq-4" class="hidden text-gray-700 pb-3">
+                    Suscríbete a nuestro boletín para recibir las últimas novedades, avances y beneficios exclusivos. También puedes seguirnos en nuestras redes sociales para conocer más sobre JHABIX y su desarrollo.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Equipo de trabajo -->
+    <section id="equipo" class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-bold text-center mb-6">Conoce al equipo detrás de JHABIX</h2>
+        <p class="text-center text-gray-700 mb-6">
+            JHABIX nació con la visión de fusionar la tecnología con la sostenibilidad. Nuestro equipo de cofundadores está comprometido con la innovación, el diseño y el desarrollo de soluciones inteligentes para el hogar. 
+        </p>
+    
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <!-- Albis Fox -->
+            <div class="p-4 shadow-lg rounded-lg">
+                <img src="assets/img/Al.jpg" alt="Albis Fox" class="w-32 h-32 mx-auto rounded-full object-cover">
+                <h3 class="text-lg font-semibold mt-4">Albis Fox</h3>
+                <p class="text-sm text-gray-600">CEO & Líder de Innovación</p>
+                <p class="text-sm mt-2">
+                    Fundador de JHABIX y líder del equipo. Especialista en diseño, desarrollo y prototipado de hardware. Apasionado por la tecnología y la creación de soluciones innovadoras para el hogar inteligente.
+                </p>
+            </div>
+    
+            <!-- CTO (Desarrollo de la App) -->
+            <div class="p-4 shadow-lg rounded-lg">
+                <img src="assets/img/Jh.jpg" alt="Jhonatan Rodriguez" class="w-32 h-32 mx-auto rounded-full object-cover">
+                <h3 class="text-lg font-semibold mt-4">Jhonatan Rodriguez</h3>
+                <p class="text-sm text-gray-600">CTO - Desarrollo de Software y Hardware</p>
+                <p class="text-sm mt-2">
+                    Ingeniero responsable de la app de JHABIX y del montaje del hardware. Experto en la integración de software con dispositivos inteligentes y optimización del rendimiento magister en IA.
+                </p>
+            </div>
+    
+            <!-- COO (Gestión del Proyecto y Tecnología) -->
+            <div class="p-4 shadow-lg rounded-lg">
+                <img src="assets/img/Ro.jpg" alt="Robinson Moreno" class="w-32 h-32 mx-auto rounded-full object-cover">
+                <h3 class="text-lg font-semibold mt-4">Robinson Moreno</h3>
+                <p class="text-sm text-gray-600">COO - Gestión del Proyecto y Tecnología</p>
+                <p class="text-sm mt-2">
+                    Ingeniero con experiencia en gestión de proyectos tecnológicos y optimización de hardware/software. Se encarga de la estrategia tecnológica y operativa de JHABIX, asegurando su viabilidad y escalabilidad.
+                </p>
+            </div>
+        </div>
+    </section>
+    
 
     <!-- 📩 Formulario de suscripción -->
-    <section class="max-w-lg mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center">
+    <section class="max-w-lg mx-auto my-10 p-6 bg-white shadow-lg rounded-lg text-center animate-fadeIn">
         <h2 class="text-2xl font-bold">Sé el primero en enterarte</h2>
         <p class="mt-2">Regístrate y recibe noticias exclusivas sobre JHABIX</p>
         <form id="formulario" action="https://formspree.io/f/tu-endpoint" method="POST" class="mt-4">
@@ -85,13 +223,15 @@
             <span id="email-error" class="text-red-600 text-xs mt-1 hidden">❌ Ingresa un correo válido.</span>
 
             <label class="block mt-4 text-gray-700 text-sm font-bold mb-2">¿Cómo te gustaría participar?</label>
-            <select name="participacion" id="participacion" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-verde-principal">
+            <select name="participacion" id="participacion"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-verde-principal">
                 <option value="comprar">Quiero comprar JHABIX</option>
                 <option value="invertir">Quiero invertir en JHABIX</option>
                 <option value="informacion">Solo quiero información</option>
             </select>
 
-            <button type="submit" class="mt-4 w-full bg-morado-principal text-white font-bold py-3 rounded-lg hover:bg-verde-secundario">
+            <button type="submit"
+                class="mt-4 w-full bg-morado-principal text-white font-bold py-3 rounded-lg hover:bg-verde-secundario">
                 Notificarme 🔔
             </button>
         </form>
@@ -102,22 +242,93 @@
         <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
             <!-- Logo de JHABIX -->
             <img src="assets/img/logo-jhabix.png" alt="Logo JHABIX" class="w-20">
-            
+
             <!-- Redes Sociales -->
             <div class="text-lg">
                 <p>Síguenos en nuestras redes sociales:</p>
                 <div class="mt-2 flex justify-center space-x-4">
-                    <a href="#" class="hover:text-yellow-300">Facebook</a>
-                    <a href="#" class="hover:text-yellow-300">Instagram</a>
+                    <a href="https://www.instagram.com/jhabix.smart/" class="hover:text-yellow-300">Instagram</a>
+                    <a href="#" class="hover:text-yellow-300">LinkedIn</a>
+                    <a href="#" class="hover:text-yellow-300">TikTok</a>
                     <a href="#" class="hover:text-yellow-300">Twitter</a>
                 </div>
+
             </div>
 
             <!-- Mascota de JHABIX -->
             <img src="assets/img/mascota-jhabix.png" alt="Mascota JHABIX" class="w-24">
         </div>
 
-        <p class="mt-4 text-sm">&copy; 2024 JHABIX. Todos los derechos reservados.</p>
+        <p class="mt-4 text-sm">
+            <a href="javascript:void(0);" onclick="abrirModal()" class="underline cursor-pointer">Política de
+                Privacidad</a> | © 2024 JHABIX. Todos los derechos reservados.
+        </p>
+
     </footer>
 </body>
+
+<!-- Modal de Política de Privacidad -->
+<div id="modalPrivacidad" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
+    <div class="bg-white p-6 max-w-2xl rounded-lg shadow-lg relative">
+        <h2 class="text-2xl font-bold mb-4">Política de Privacidad</h2>
+        <div class="h-64 overflow-y-auto text-sm text-gray-700">
+            <p><strong>Última actualización:</strong> [Fecha]</p>
+
+            <h3 class="font-semibold mt-3">1. Introducción</h3>
+            <p>Bienvenido a JHABIX. Nos tomamos en serio tu privacidad y queremos explicarte cómo recopilamos, usamos y
+                protegemos tu información.</p>
+
+            <h3 class="font-semibold mt-3">2. Información que Recopilamos</h3>
+            <ul class="list-disc pl-6">
+                <li><strong>Datos de contacto:</strong> Nombre y correo electrónico (cuando te registras para recibir
+                    novedades).</li>
+                <li><strong>Datos de navegación:</strong> Dirección IP, tipo de dispositivo y comportamiento en la web.
+                </li>
+                <li><strong>Cookies:</strong> Utilizamos cookies para mejorar la experiencia del usuario y analizar el
+                    tráfico del sitio.</li>
+            </ul>
+
+            <h3 class="font-semibold mt-3">3. Cómo Usamos tu Información</h3>
+            <p>Utilizamos la información recopilada para:</p>
+            <ul class="list-disc pl-6">
+                <li>Enviarte actualizaciones y noticias sobre JHABIX.</li>
+                <li>Mejorar la experiencia del usuario en nuestro sitio web.</li>
+                <li>Analizar tendencias y estadísticas de tráfico.</li>
+            </ul>
+
+            <h3 class="font-semibold mt-3">4. Compartición de Datos</h3>
+            <p>No vendemos ni compartimos tu información personal, excepto en los siguientes casos:</p>
+            <ul class="list-disc pl-6">
+                <li>Si es requerido por la ley.</li>
+                <li>Para mejorar nuestros servicios mediante herramientas de análisis como Google Analytics.</li>
+            </ul>
+
+            <h3 class="font-semibold mt-3">5. Seguridad de los Datos</h3>
+            <p>Implementamos medidas de seguridad para proteger tu información, pero recuerda que ninguna plataforma en
+                internet es completamente segura.</p>
+
+            <h3 class="font-semibold mt-3">6. Tus Derechos</h3>
+            <p>Como usuario, tienes derecho a:</p>
+            <ul class="list-disc pl-6">
+                <li>Acceder a tus datos personales.</li>
+                <li>Solicitar la eliminación o modificación de tus datos.</li>
+                <li>Cancelar tu suscripción en cualquier momento.</li>
+            </ul>
+
+            <h3 class="font-semibold mt-3">7. Cambios en la Política</h3>
+            <p>Podemos actualizar esta política en el futuro. Te notificaremos si realizamos cambios importantes.</p>
+
+            <h3 class="font-semibold mt-3">8. Contacto</h3>
+            <p>Si tienes preguntas sobre nuestra Política de Privacidad, puedes escribirnos a: <strong>[correo de
+                    contacto]</strong>.</p>
+
+            <p class="mt-4 text-center text-xs text-gray-500">© 2024 JHABIX. Todos los derechos reservados.</p>
+        </div>
+
+        <button onclick="cerrarModal()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+            ✖
+        </button>
+    </div>
+</div>
+
 </html>
